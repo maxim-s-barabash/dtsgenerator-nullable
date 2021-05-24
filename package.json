@@ -1,6 +1,6 @@
 {
   "name": "dtsgenerator-nullable",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "nullable the props in scheme",
   "main": "dist/",
   "scripts": {
