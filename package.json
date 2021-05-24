@@ -1,0 +1,59 @@
+{
+  "name": "dtsgenerator-nullable",
+  "version": "1.0.0",
+  "description": "nullable the props in scheme",
+  "main": "dist/",
+  "scripts": {
+    "clean": "rimraf index.js test/**/*.js *.tsbuildinfo",
+    "lint": "eslint *.ts **/*.ts",
+    "lint:fix": "npm run lint -- --fix",
+    "precompile": "npm run lint",
+    "compile": "tsc -p .",
+    "watch": "npm run compile -- -w",
+    "build": "npm run compile",
+    "do-test": "cross-env TS_NODE_FILES=true mocha --exit --require ts-node/register --colors test/*_test.ts",
+    "test": "nyc npm run do-test",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "test:update-snapshot": "UPDATE_SNAPSHOT=1 npm run do-test"
+  },
+  "directories": {
+    "test": "test/"
+  },
+  "keywords": [
+    "dtsgenerator",
+    "dtsgenerator-plugin"
+  ],
+  "author": "Maxim Barabash <maxim.s.barabash@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/maxim-s-barabash/dtsgenerator-nullable",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:maxim-s-barabash/dtsgenerator-nullable.git"
+  },
+  "bugs": {
+    "url": "https://github.com/maxim-s-barabash/dtsgenerator-nullable/issues"
+  },
+  "engines": {
+    "node": ">= 10.0"
+  },
+  "dependencies": {
+    "dtsgenerator": "^3.9.1",
+    "tslib": "^2.2.0",
+    "typescript": "^4.2.4"
+  },
+  "devDependencies": {
+    "@types/mocha": "^8.2.2",
+    "@types/node": "^14.14.41",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.24.0",
+    "eslint-config-prettier": "^8.2.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "mocha": "^8.3.2",
+    "nyc": "^15.1.0",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
+    "ts-node": "^9.1.1"
+  }
+}
