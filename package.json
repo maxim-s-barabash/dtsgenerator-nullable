@@ -1,8 +1,8 @@
 {
   "name": "dtsgenerator-nullable",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "nullable the props in scheme",
-  "main": "dist/",
+  "main": "index.js",
   "scripts": {
     "clean": "rimraf index.js test/**/*.js *.tsbuildinfo",
     "lint": "eslint *.ts **/*.ts",
